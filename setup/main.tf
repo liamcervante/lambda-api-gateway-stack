@@ -26,14 +26,14 @@ data "aws_iam_policy_document" "default" {
     }
     actions = ["sts:AssumeRoleWithWebIdentity"]
     condition {
-      test     = "StringEquals"
+      test     = "StringLike"
       variable = "app.terraform.io:aud"
       values   = ["aws.workload.identity"]
     }
     condition {
       test     = "StringLike"
       variable = "app.terraform.io:sub"
-      values   = ["organization:org-bG8tiTdMQAnQd7do:project:prj-YZTms1HGmqYxN9oH"]
+      values   = ["organization:org-bG8tiTdMQAnQd7do:project:prj-YZTms1HGmqYxN9oH:*"]
     }
   }
 }
