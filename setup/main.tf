@@ -33,7 +33,7 @@ data "aws_iam_policy_document" "default" {
     condition {
       test     = "StringLike"
       variable = "app.terraform.io:sub"
-      values   = ["organization:org-bG8tiTdMQAnQd7do:project:prj-YZTms1HGmqYxN9oH:*"]
+      values   = ["organization:org-bG8tiTdMQAnQd7do:*"]
     }
   }
 }
