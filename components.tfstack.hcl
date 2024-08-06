@@ -5,7 +5,7 @@ component "s3" {
   source = "./s3"
 
   inputs = {
-    region = var.region
+    # region = var.region
   }
 
   providers = {
