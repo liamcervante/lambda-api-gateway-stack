@@ -18,8 +18,8 @@ component "lambda" {
   source = "./lambda"
 
   inputs = {
-    region    = var.region
-    bucket_id = component.s3.bucket_id
+    # region    = var.region
+    # bucket_id = component.s3.bucket_id
   }
 
   providers = {
@@ -34,9 +34,9 @@ component "api_gateway" {
   source = "./api-gateway"
 
   inputs = {
-    region               = var.region
-    lambda_function_name = component.lambda.function_name
-    lambda_invoke_arn    = component.lambda.invoke_arn
+    # region               = var.region
+    # lambda_function_name = component.lambda.function_name
+    # lambda_invoke_arn    = component.lambda.invoke_arn
   }
 
   providers = {
